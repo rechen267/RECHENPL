@@ -1,0 +1,154 @@
+{
+  "$schema": "https://schemas.glavo.site/hmcl/theme-pack/1.0.0",
+  "id": "rechenpl",
+  "version": "1.0.0",
+  "name": {
+    "default": "RECHENPL Themes",
+    "zh-Hans": "若尘启动器主题"
+  },
+  "description": {
+    "default": "Exclusive themes for RECHENPL launcher",
+    "zh-Hans": "若尘启动器专属主题包"
+  },
+  "authors": [
+    {
+      "name": {
+        "default": "rechen267"
+      }
+    }
+  ],
+  "themes": [
+    {
+      "id": "ruochen-night",
+      "name": {
+        "default": "Ruochen Night",
+        "zh-Hans": "若尘·夜"
+      },
+      "description": {
+        "default": "Exclusive dark theme for RECHENPL launcher",
+        "zh-Hans": "若尘启动器专属深色主推主题"
+      },
+      "color": "#6A1B9A",
+      "brightness": "dark",
+      "colorStyle": "fidelity",
+      "background": {
+        "type": "paint",
+        "paint": "#14101E",
+        "opacity": 1.0
+      },
+      "titleBar": {
+        "transparent": false
+      }
+    },
+    {
+      "id": "ruochen-gold",
+      "name": {
+        "default": "Ruochen Gold",
+        "zh-Hans": "若尘·鎏金"
+      },
+      "description": {
+        "default": "Exclusive gold dark theme for RECHENPL launcher",
+        "zh-Hans": "若尘启动器专属鎏金深色主题"
+      },
+      "color": "#C9A227",
+      "brightness": "dark",
+      "colorStyle": "fidelity",
+      "background": {
+        "type": "paint",
+        "paint": "#15130C",
+        "opacity": 1.0
+      },
+      "titleBar": {
+        "transparent": false
+      }
+    },
+    {
+      "id": "night-blue",
+      "name": {
+        "default": "Night Blue",
+        "zh-Hans": "暗夜蓝"
+      },
+      "description": {
+        "default": "Dark blue theme",
+        "zh-Hans": "深邃暗蓝主题"
+      },
+      "color": "#2962FF",
+      "brightness": "dark",
+      "colorStyle": "fidelity",
+      "background": {
+        "type": "builtin",
+        "id": "2021-08-26",
+        "opacity": 1.0
+      },
+      "titleBar": {
+        "transparent": false
+      }
+    },
+    {
+      "id": "azure",
+      "name": {
+        "default": "Azure Sky",
+        "zh-Hans": "晴空蓝"
+      },
+      "description": {
+        "default": "Bright blue theme",
+        "zh-Hans": "清爽明亮的蓝色主题"
+      },
+      "color": "#0288D1",
+      "brightness": "light",
+      "colorStyle": "fidelity",
+      "background": {
+        "type": "builtin",
+        "id": "2021-08-26",
+        "opacity": 1.0
+      },
+      "titleBar": {
+        "transparent": false
+      }
+    },
+    {
+      "id": "mint",
+      "name": {
+        "default": "Mint",
+        "zh-Hans": "薄荷青"
+      },
+      "description": {
+        "default": "Fresh mint green theme",
+        "zh-Hans": "清新薄荷绿主题"
+      },
+      "color": "#00897B",
+      "brightness": "light",
+      "colorStyle": "fidelity",
+      "background": {
+        "type": "builtin",
+        "id": "2015-06-22",
+        "opacity": 1.0
+      },
+      "titleBar": {
+        "transparent": false
+      }
+    },
+    {
+      "id": "sakura",
+      "name": {
+        "default": "Sakura",
+        "zh-Hans": "樱粉紫"
+      },
+      "description": {
+        "default": "Sakura pink theme",
+        "zh-Hans": "樱粉浪漫主题"
+      },
+      "color": "#C2185B",
+      "brightness": "light",
+      "colorStyle": "fidelity",
+      "background": {
+        "type": "builtin",
+        "id": "2016-02-25",
+        "opacity": 1.0
+      },
+      "titleBar": {
+        "transparent": false
+      }
+    }
+  ]
+}
