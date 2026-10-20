@@ -26,6 +26,8 @@ import org.jackhuang.hmcl.util.io.NetworkUtils;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.Optional;
 
 public record RemoteVersion(UpdateChannel channel, String version, String url, Type type, IntegrityCheck integrityCheck,
@@ -34,6 +36,12 @@ public record RemoteVersion(UpdateChannel channel, String version, String url, T
     public static RemoteVersion fetch(UpdateChannel channel, boolean preview, String url) throws IOException {
         try {
             JsonObject response = JsonUtils.fromNonNullJson(NetworkUtils.doGet(url), JsonObject.class);
+            // 兼容 GitHub API contents 响应：内容以 base64 包装在 content 字段中
+            if (!response.has("version") && response.has("content") && response.has("encoding")
+                    && "base64".equalsIgnoreCase(response.get("encoding").getAsString())) {
+                byte[] decoded = Base64.getMimeDecoder().decode(response.get("content").getAsString());
+                response = JsonUtils.fromNonNullJson(new String(decoded, StandardCharsets.UTF_8), JsonObject.class);
+            }
             String version = Optional.ofNullable(response.get("version")).map(JsonElement::getAsString).orElseThrow(() -> new IOException("version is missing"));
             String jarUrl = Optional.ofNullable(response.get("jar")).map(JsonElement::getAsString).orElse(null);
             String jarHash = Optional.ofNullable(response.get("jarsha1")).map(JsonElement::getAsString).orElse(null);

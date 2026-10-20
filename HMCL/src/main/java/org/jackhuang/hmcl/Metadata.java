@@ -50,7 +50,7 @@ public final class Metadata {
 
     public static final String PUBLISH_URL = "https://github.com/rechen267/RECHENPL";
     public static final String DOWNLOAD_URL = PUBLISH_URL + "/releases";
-    public static final String HMCL_UPDATE_URL = System.getProperty("hmcl.update_source.override", "https://raw.githubusercontent.com/rechen267/RECHENPL/hmcl/update.json");
+    public static final String HMCL_UPDATE_URL = System.getProperty("hmcl.update_source.override", "https://api.github.com/repos/rechen267/RECHENPL/contents/update.json?ref=hmcl");
     public static final String MANUAL_UPDATE_URL = "https://github.com/rechen267/RECHENPL/releases";
 
     public static final String DOCS_URL = "https://docs.hmcl.net";
